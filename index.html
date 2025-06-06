@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="root/mídia/imagens/página_inicial/simbolo_red_velvet.png" type="image/símbolo_red-velvet">
+    <link rel="stylesheet" href="root/css/página_inicial/index.css">
+    <title>Red Velvet</title>
+</head>
+<body>
+    <!-- cabeçalho ; estrutura de navegação -->
+    <header>
+        <div class="mode-buttons">
+            <button id="btn_pt" class="mode-btn">PT</button>
+            <button id="btn_en" class="mode-btn active">ENG</button>
+        </div>  
+        
+        <a href="#" class="logo"><img src="root/mídia/imagens/página_inicial/red_logo_shadow.png" alt="Logo Red Velvet"></a>
+
+        <nav class="navbar"> 
+            <a href="./red.html" target="_blank">RED</a>
+            <a href="./velvet.html" target="_blank">VELVET</a>
+        </nav>
+
+        <div class="mode-selector">
+            <button id="light-mode" class="mode-btn"><i class="fa fa-sun-o"></i></button>
+            <button id="dark-mode" class="mode-btn active"><i class="fa fa-moon-o"></i></button>
+        </div>
+    </header>
+
+    <!-- cabeçalho ; colocação do texto de entrada -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3 id="home_title">Red Velvet</h3>
+            <p id="home_text">Este site é dedicado a explorar o universo do grupo Red Velvet. Aqui, você encontrará uma imersão nos diferentes conceitos que o grupo apresenta ao longo de sua carreira, destacando suas músicas e estéticas. Cada detalhe foi pensado para transmitir a diversidade e a inovação que fazem do Red Velvet um grupo único!</p>
+        </div>
+    </section>
+
+    <!-- sobre o grupo ; gif - título - texto - link para a explicação detalhada -->
+    <section class="about" id="about">
+        <h1 class="heading" id="about_title">SOBRE</h1>
+    
+        <div class="content">
+            <div class="gif">
+                <img id="gif_group" src="root/mídia/imagens/página_inicial/cosmic_gif.webp" alt="GIF do grupo" loop autoplay>
+            </div>
+    
+            <div class="text-about">
+                <h3 id="about_subtitle">Formação do grupo</h3>
+                <p id="about_text">
+                    Red Velvet é um grupo feminino sul-coreano formado pela SM Entertainment, composto por 5 integrantes. Conhecidas por sua versatilidade musical, elas se destacam pela habilidade em transitar entre estilos doces e ousados, criando uma sonoridade única.
+                </p>
+    
+                <div class="extra-text">
+                    <p id="about_extra">
+                        O grupo debutou em 2014 com a música "Happiness" e rapidamente ganhou destaque com seu conceito duplo: o lado “Red”, mais vibrante e pop, e o lado “Velvet”, mais suave e maduro. As integrantes – Irene, Seulgi, Wendy, Joy e Yeri – se destacam não apenas como grupo, mas também em carreiras solo sub-units. Ao longo dos anos, o Red Velvet acumulou inúmeros prêmios, turnês internacionais e um legado marcante no K-pop.
+                    </p>
+                </div>
+    
+                <button class="read-more-btn" id="btn_read_more">LEIA MAIS</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- sobre os memberos ; título, divs sepradas para melehor organização -->
+    <div class="box">
+        <h1 id="members_title">INTEGRANTES</h1>
+        <p id="members_intro">Inicialmente o grupo era composto por quatro membros. Mais tarde, em março de 2015, <span>Yeri</span> foi adicionada ao grupo durante a era <a href="https://youtu.be/T2E5PeoyXF0?si=Kns7Fm9KvfwhnDlu" target="_blank"><i>Ice Cream Cake</i></a>, consolidando a formação atual. Cada integrante tem um papel único, combinando vocais poderosos, performances marcantes e personalidades carismáticas, o que contribui para a identidade versátil do grupo.</p>
+    
+    
+        <div class="carousel-container">
+            <button class="nav prev" onclick="prevSlide()">❮</button>
+    
+            <div class="carousel">
+                <div class="slide active">
+                    <img id="integrante-yeri" src="root/mídia/imagens/página_inicial/cosmic_yeri.jpeg" alt="Yeri">
+                    <div class="slide-content">
+                        <h2 id="yeri_name">Yeri (Kim Ye-rim)</h2>
+                        <ul id="yeri_info">
+                            <li id="members_yeri_info_1">Data de nascimento: 5 de março de 1999;</li>
+                            <li id="members_yeri_info_2">Posição no grupo: Vocalista, rapper e maknae;</li>
+                            <li id="members_yeri_info_3">Fato adicional: Entrou no grupo em 2015 e também trabalha como atriz.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img id="integrante-joy" src="root/mídia/imagens/página_inicial/cosmic_joy.jpeg" alt="Joy">
+                    <div class="slide-content">
+                        <h2 id="joy_name">Joy (Park Soo-young)</h2>
+                        <ul id="joy_intro">
+                            <li id="members_joy_info_1">Data de nascimento: 3 de setembro de 1996;</li>
+                            <li id="members_joy_info_2">Posição no grupo: Rapper líder e sub vocalista;</li>
+                            <li id="members_joy_info_3">Fato adicional: Também é atriz e já protagonizou diversos dramas coreanos com boa recepção do público.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img id="integrante-wendy" src="root/mídia/imagens/página_inicial/cosmic_wendy.jpeg" alt="Wendy">
+                    <div class="slide-content">
+                        <h2 id="wendy_name">Wendy (Shon Seung-wan)</h2>
+                        <ul id="wendy_intro">
+                            <li id="members_wendy_info_1">Data de nascimento: 21 de fevereiro de 1994;</li>
+                            <li id="members_wendy_info_2">Posição no grupo: Vocalista principal;</li>
+                            <li id="members_wendy_info_3">Fato adicional: Vivenciou parte da infância no Canadá e é fluente em inglês, além de ter uma carreira solo bem-sucedida.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img id="integrante-seulgi" src="root/mídia/imagens/página_inicial/cosmic_seulgi.jpeg" alt="Seulgi">
+                    <div class="slide-content">
+                        <h2 id="seulgi_name">Seulgi (Kang Seul-gi)</h2>
+                        <ul id="seulgi_intro">
+                            <li id="members_seulgi_info_1">Data de nascimento: 10 de fevereiro de 1994;</li>
+                            <li id="members_seulgi_info_2">Posição no grupo: Dançarina principal e vocalista;</li>
+                            <li id="members_seulgi_info_3">Fato adicional: É considerada uma das melhores dançarinas da 3ª geração do K-pop e já participou de sub-units e projetos solos.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img id="integrante-irene" src="root/mídia/imagens/página_inicial/cosmic_irene.jpeg" alt="Irene">
+                    <div class="slide-content">
+                        <h2 id="irene_name">Irene (Bae Joo-hyun)</h2>
+                        <ul id="irene_intro">
+                            <li id="members_irene_info_1">Data de nascimento: 29 de março de 1991;</li>
+                            <li id="members_irene_info_2">Posição no grupo: Líder, visual e rapper principal;</li>
+                            <li id="members_irene_info_3">Fato adicional: É conhecida por sua beleza marcante e elegância, além de ter atuado em dramas e comerciais.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <button class="nav next" onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+
+    <!-- ir para as outras páginas; título - texto - imagens personalizadas -->
+    <section class="side" id="side">
+        <div class="image-wrapper">
+            <h1 id="concepts_title">CONCEITOS</h1>
+            <p id="concepts_text">Os conceitos <span>Red</span> e <span>Velvet</span> representam duas facetas opostas de seu estilo. <span>Red</span> traz uma energia vibrante e animada, enquanto <span>Velvet</span> é mais suave e sofisticado. Essa dualidade permite ao grupo explorar uma ampla gama de estilos musicais e visuais. Agora escolha qual dessas produções deseja conhecer mais a fundo primeiro!
+            </p>
+            <div class="concepts">
+                <h3>RED</h3>
+                <h3>VELVET</h3>
+            </div>
+
+            <div class="concept">
+                <div class="media">
+                    <div class="overlay"></div>
+                    <img id="cover_feel_my_rhythm" src="root/mídia/imagens/página_inicial/cover-feel_my_rhythm.png" alt="Capa do álbum Feel My Rhythm">
+                    <div class="image-details">
+                        <a href="./red.html">
+                            <p id="side_red">LADO RED</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="media">
+                    <div class="overlay"></div>
+                    <img id="cover_peek_a_boo" src="root/mídia/imagens/página_inicial/cover-peek_a_boo.png" alt="Capa do álbum Peek-A-Boo">
+                    <div class="image-details">
+                        <a href="./velvet.html">
+                            <p id="side_velvet">LADO VELVET</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- rodapé; créditos -->
+    <footer>
+        <p id="footer_text">&copy; 2025 <span>Anna Carolina Rodrigues Pacheco</span>. All Rights reserved</p>
+        <a href="index.html"><img src="root/mídia/imagens/página_inicial/red_logo_shadow.png" alt="Logo Red Velvet"></a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
