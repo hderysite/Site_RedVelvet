@@ -1,0 +1,66 @@
+{
+  "general": {
+    "btn_read_more": "READ MORE",
+    "footer": "&copy; 2025 Anna Carolina Rodrigues Pacheco. All rights reserved",
+    "red_side": "RED SIDE",
+    "velvet_side": "VELVET SIDE"
+  },
+  "home": {
+    "title": "Red Velvet",
+    "text": "This website is dedicated to exploring the universe of the group Red Velvet. Here, you'll dive into the different concepts the group has presented throughout their career, highlighting their music and aesthetics. Every detail was designed to convey the diversity and innovation that make Red Velvet a unique group!"
+  },
+  "about": {
+    "title": "ABOUT",
+    "subtitle": "Group Formation",
+    "text": "Red Velvet is a South Korean girl group formed by SM Entertainment, consisting of 5 members. Known for their musical versatility, they stand out for their ability to shift between sweet and bold styles, creating a unique sound.",
+    "extra": "The group debuted in 2014 with the song \"Happiness\" and quickly gained attention with their dual concept: the “Red” side, more vibrant and pop, and the “Velvet” side, softer and more mature. The members – Irene, Seulgi, Wendy, Joy, and Yeri – shine not only as a group but also through solo careers and sub-units. Over the years, Red Velvet has accumulated numerous awards, international tours, and a lasting legacy in K-pop."
+  },
+  "members": {
+    "title": "MEMBERS",
+    "intro": "Initially, the group had four members. Later, in March 2015, <span>Yeri</span> was added during the <a href=\"https://youtu.be/T2E5PeoyXF0?si=Kns7Fm9KvfwhnDlu\" target=\"_blank\"><i>Ice Cream Cake</i></a> era, completing the current lineup. Each member plays a unique role, combining powerful vocals, impactful performances, and charismatic personalities, all contributing to the group’s versatile identity.",
+    "yeri": {
+      "name": "Yeri (Kim Ye-rim)",
+      "info": [
+        "Birthdate: March 5, 1999;",
+        "Group position: Vocalist, rapper, and maknae;",
+        "Fun fact: Joined the group in 2015 and also works as an actress."
+      ]
+    },
+    "joy": {
+      "name": "Joy (Park Soo-young)",
+      "info": [
+        "Birthdate: September 3, 1996;",
+        "Group position: Lead rapper and sub-vocalist;",
+        "Fun fact: She is also an actress and has starred in several successful Korean dramas."
+      ]
+    },
+    "wendy": {
+      "name": "Wendy (Shon Seung-wan)",
+      "info": [
+        "Birthdate: February 21, 1994;",
+        "Group position: Main vocalist;",
+        "Fun fact: Spent part of her childhood in Canada and is fluent in English. She also has a successful solo career."
+      ]
+    },
+    "seulgi": {
+      "name": "Seulgi (Kang Seul-gi)",
+      "info": [
+        "Birthdate: February 10, 1994;",
+        "Group position: Main dancer and vocalist;",
+        "Fun fact: Considered one of the top dancers of K-pop's 3rd generation and has participated in sub-units and solo projects."
+      ]
+    },
+    "irene": {
+      "name": "Irene (Bae Joo-hyun)",
+      "info": [
+        "Birthdate: March 29, 1991;",
+        "Group position: Leader, visual, and main rapper;",
+        "Fun fact: Known for her striking beauty and elegance, she has also acted in dramas and commercials."
+      ]
+    }
+  },
+  "concepts": {
+    "title": "CONCEPTS",
+    "text": "The <span>Red</span> and <span>Velvet</span> concepts represent two opposing facets of their style. <span>Red</span> brings vibrant, energetic vibes, while <span>Velvet</span> is softer and more refined. This duality allows the group to explore a wide range of musical and visual styles. Now choose which of these productions you'd like to explore first!"
+  }
+}

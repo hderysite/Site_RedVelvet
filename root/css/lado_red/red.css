@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+/* fonte para o título */
+@font-face {
+    font-family: 'Velvet';
+    src: url(../../fontes/lado_red/Bubblegum.ttf) format('opentype');
+    font-weight: normal;
+}
+
+/* melhor guia */
+:root {
+    --fonte-velvet: 'Velvet', cursive;
+    --cor1: #ee0979; /* opcional */
+    --cor2: #cc7178; /* opcional */
+    --cor3: #fc001f; /* vermelho intenso */
+    --cor4: #fe6e61; /* vermelho coral */
+}
+
+/* seletor universal - configuração página */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%; /* preencher toda a página */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* configuração da imagem */
+img {
+    vertical-align: middle;
+    max-width: 100%; /* preencher o contêiner */
+    display: inline-block; /* não quebra o layout - funcionar dentro do contêiner */
+}
+
+/* configuração do vídeo */
+video {
+    vertical-align: middle;
+    max-width: 100%;
+    margin-top: -25px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* título com o uso da H2 */
+h2 {
+    font-family: var(--fonte-velvet);
+    font-size: 57px;
+    background: #fc001f;
+    background: -webkit-linear-gradient(
+        to right,
+        #fc001f,
+        #fe6e61
+    );
+    background: linear-gradient(
+        to right,
+        #fc001f,
+        #fe6e61
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* uma mini explicação com o H4 */
+h4 {
+    background: linear-gradient(to right, transparent, #fc001f, #fe6e61, transparent);
+    margin-top: -39px;
+    margin-bottom: 50px;
+}
+
+/* collocar um do lado do outro */
+.inline-block {
+    max-width: 100%;
+    display: inline-block;
+} 
+
+/* sem este elemento a página não "funcionaria" */
+.page-wrapper {
+    z-index: 0;
+    position: relative;
+}
+
+/* cor da header */
+.section-timeline-heading {
+    background-color: #0a0a0a;
+}
+
+/* centralização dos conteúdos */
+.container {
+    width: 90vw;
+    max-width: 1360;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* configuração da header */
+.padding-vertical-xlarge {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* configuração da header-texto */
+.timeline-main_heading-wrapper {
+    color: #fff;
+    text-align: center;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* configuração do espaçamento entro o segundo (e outros) texto e vídeo */
+.margin-bottom-medium {
+    margin-bottom: 56px;
+}
+
+/* configuração específica dos textos */
+.paragraph-large {
+    letter-spacing: -0.02em;
+    font-size: 20px;
+}
+
+/* configuração da  parte da linha do tempo */
+main {
+    z-index: -3; /* configuração linha -defini qual elemento irá sobrepor */
+    background-color: #0a0a0a;
+    position: relative;
+    zoom: 70%; /* diminui tamanho dos elementos, para não ficar grandes */
+}
+
+/* configuração da linha do tempo - estrutura */
+.timeline_component {
+    flex-direction: column; /* centralização - cima para baixo */
+    justify-content: center; 
+    align-items: center; /* centraliza a linha - principal */
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+}
+
+/* configuração linha cinza que percorrerá a colorida */
+.timeline_progress {
+    z-index: -2;
+    background-color: #414141;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+}
+
+/* configuração da linha colorida que percorrerá por cima da cinza */
+.timeline_progress_bar {
+    z-index: -1; /* sobreposição dos elementos (linha colorida)*/
+    background: #fc001f;
+    background: -webkit-linear-gradient(
+        to bottom,
+        #fc001f,
+        #fe6e61
+    );
+    background: linear-gradient(
+        to bottom,
+        #fc001f,
+        #fe6e61
+    );
+
+    width: 3px; /* largura da linha colorida */
+    height: 50vh; /* altura para acompanhar a bolinha */
+    position: fixed; /* acompanhar */
+    inset: 0 auto 50vh; 
+}
+
+/* configuração da linha do tempo - estrutura dos textos */
+.timeline_item {
+    z-index: 2;
+    display: grid; /* organização em grades */
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto; /* ajustado conforme o conteúdo */
+    grid-template-columns: 1fr 180px 1fr; /* espaçamento cada "coluna" */
+    grid-auto-columns: 1fr;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+/* configuração da linha do tempo -  parte esquerda (DATAS) */
+.timeline_left {
+    text-align: right;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+/* configuração das DATAS ARRUMAR TAMANHO FONT-SIZE */
+.timeline_date-text {
+    color: #fff;
+    letter-spacing: -0.03;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    position: sticky; /* permite a data se mover */
+    top: 50vh; /* sincronização com a bolinha */
+}
+
+/* configuração da linha do tempo - parte do meio (BOLINHA) */
+.timeline_center {
+    justify-content: center;
+    display: flex;
+}
+
+/* configuração da BOLINHA da linha do tempo COLOCAR IMAGEM */
+.timeline_circle {
+    background-color: #fff;
+    border-radius: 100%;
+    width: 15px;
+    min-width: 15px;
+    max-width: 15px;
+    height: 15px;
+    min-height: 15px;
+    max-height: 15px;
+    position: sticky;
+    top: 50vh;
+    box-shadow: 0 0 0 8px #0a0a0a;
+}
+
+/* configuração do espaçamento entro o primeiro texto e vídeo */
+.margin-bottom-xlarge {
+    margin-bottom: 56px;
+}
+
+/* configuração dos textos do lado direito */
+.timeline_text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: justify; /* tirar para ficar para esquerda ou deixar justificado para centralizar */
+}
+
+.link_vermelho {
+    font-size: 35px;
+    text-decoration: none;
+    color: #fc001f;
+}
+
+.link_coral {
+    font-size: 35px;
+    text-decoration: none;
+    color: #fe6e61;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* faz com que tenha uma leve transparência no começo da linha */
+.overlay-fade-top {
+    background-image: linear-gradient(#0a0a0a, #0a0a0a00);
+    height: 88px;
+    position: absolute;
+    inset: 0% 0% auto;
+}
+
+/* - não utilizado
+.overlay-fade-bottom {
+    background-image: linear-gradient(to top #0a0a0a, #0a0a0a00);
+    width: 88%;
+    position: absolute;
+    inset: 0% 0% auto;
+} */
+
+/* da linha do tempo para os botões */
+.fundo1 {
+    padding-top: 50px;
+    background-color: #0a0a0a;
+}
+
+.buttons {
+    text-align: center;
+}
+
+/* configuração do link */
+.buttons a {
+    color: white;
+    text-decoration: none;
+    font-size: 130px;
+}
+
+/* configuração do botão 1 */
+.buttons .button1 {
+    margin-right: 115px;
+}
+
+/* configuração do botão 2 */
+.buttons .button2 {
+    margin-left: 65px;
+}
+
+/* animação dos botões */
+.buttons .button1:hover {
+    color: #fc001f;
+    text-shadow: 2px 4px 5px #fc001f;
+}
+
+.buttons .button2:hover {
+    color: #fe6e61;
+    text-shadow: 2px 2px 4px #fe6e61;
+}
+
+/* parte debaixo do site (sobra) */
+.fundo2 {
+    height: 50vh;
+    background-color: #0a0a0a;
+}
+
+/* configurações do rodapé */
+footer {
+    background: linear-gradient(to right, #fc001d57, #fe6e6154);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer > p {
+    font-size: 15px;
+    margin-bottom: 1px;
+}
+
+footer > a > img {
+    width: 55px;
+    height: 55px;
+    margin-top: 1px;
+}

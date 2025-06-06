@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Velvet';
+    src: url(../../fontes/lado_velvet/CSAmerta-Regular_demo.otf) format('opentype');
+    font-weight: normal;
+}
+/* billing-lottre-regular.otf */
+
+
+:root {
+    --fonte-velvet: 'Velvet', cursive;
+    --cor1: #89023e; /* vinho escuro puxado para o magenta */
+    --cor2: #8c2f39; /* vermelho bordõ com um pouco de tom terroso */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* configuração da imagem */
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* configuração do vídeo */
+video {
+    vertical-align: middle;
+    max-width: 100%;
+    margin-top: -25px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+h2 {
+    font-family: var(--fonte-velvet);
+    font-size: 57px;
+    background: #89023e;
+    background: -webkit-linear-gradient(
+        to right,
+        #89023e,
+        #8c2f39
+    );
+    background: linear-gradient(
+        to right,
+        #89023e,
+        #8c2f39
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h4 {
+    background: linear-gradient(to right, transparent, #89023e, #8c2f39, transparent);
+    margin-top: -39px;
+    margin-bottom: 50px;
+}
+
+.inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+
+.page-wrapper {
+    z-index: 0;
+    position: relative;
+}
+
+/* cor da header */
+.section-timeline-heading {
+    background-color: #0a0a0a;
+}
+
+.container {
+    width: 90vw;
+    max-width: 1360;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* configuração da header */
+.padding-vertical-xlarge {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* configuração da header-texto */
+.timeline-main_heading-wrapper {
+    color: #fff;
+    text-align: center;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* configuração do espaçamento entro o segundo (e outros) texto e vídeo */
+.margin-bottom-medium {
+    margin-bottom: 56px;
+}
+
+.paragraph-large {
+    letter-spacing: -0.02em;
+    font-size: 20px;
+}
+
+/* configuração da  parte da linha do tempo (plano de fundo) */
+main {
+    z-index: -3; /* configuração linha */
+    background-color: #0a0a0a;
+    position: relative;
+    zoom: 70%; /* diminui tamanho dos elementos, para não ficar grandes */
+}
+
+/* configuração da linha do tempo - estrutura */
+.timeline_component {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+}
+
+/* configuração linha cinza que percorrerá a colorida */
+.timeline_progress {
+    z-index: -2;
+    background-color: #414141;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+}
+
+/* configuração da linha colorida que percorrerá por cima da cinza */
+.timeline_progress_bar {
+    z-index: -1; /* sobreposição dos elementos (linha colorida)*/
+    background: #89023e;
+    background: -webkit-linear-gradient(
+        to bottom,
+        #89023e,
+        #8c2f39
+    );
+    background: linear-gradient(
+        to bottom,
+        #89023e,
+        #8c2f39
+    );
+
+    width: 3px; /* largura da linha colorida */
+    height: 50vh; /* altura para acompanhar a bolinha */
+    position: fixed; /* acompanhar */
+    inset: 0 auto 50vh; 
+}
+
+/* configuração da linha do tempo - estrutura dos textos */
+.timeline_item {
+    z-index: 2;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 180px 1fr;
+    grid-auto-columns: 1fr;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: grid;
+    position: relative;
+}
+
+/* configuração da linha do tempo -  parte esquerda (DATAS) */
+.timeline_left {
+    text-align: right;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+/* configuração das DATAS ARRUMAR TAMANHO FONT-SIZE */
+.timeline_date-text {
+    color: #fff;
+    letter-spacing: -0.03;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.2;
+    position: sticky; /* permite a data se mover */
+    top: 50vh; /* sincronização com a bolinha */
+}
+
+/* configuração da linha do tempo - parte do meio (BOLINHA) */
+.timeline_center {
+    justify-content: center;
+    display: flex;
+}
+
+/* configuração da BOLINHA da linha do tempo COLOCAR IMAGEM */
+.timeline_circle {
+    background-color: #fff;
+    border-radius: 100%;
+    width: 15px;
+    min-width: 15px;
+    max-width: 15px;
+    height: 15px;
+    min-height: 15px;
+    max-height: 15px;
+    position: sticky;
+    top: 50vh;
+    box-shadow: 0 0 0 8px #0a0a0a;
+}
+
+/* configuração do espaçamento entro o primeiro texto e vídeo */
+.margin-bottom-xlarge {
+    margin-bottom: 56px;
+}
+
+/* configuração dos textos do lado direito */
+.timeline_text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: justify; /* tirar para ficar para esquerda ou deixar justificado para centralizar */
+}
+
+.link_vinho {
+    font-size: 35px;
+    text-decoration: none;
+    color: #89023e;
+}
+
+.link_vermelho {
+    font-size: 35px;
+    text-decoration: none;
+    color: #8c2f39;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.overlay-fade-top {
+    background-image: linear-gradient(#0a0a0a, #0a0a0a00);
+    height: 88px;
+    position: absolute;
+    inset: 0% 0% auto;
+}
+
+.fundo1 {
+    padding-top: 50px;
+    background-color: #0a0a0a;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons a {
+    color: white;
+    text-decoration: none;
+    font-size: 90px;
+    display: inline-block;
+}
+
+.buttons .button1 {
+    margin-right: 65px;
+}
+
+.buttons .button2 {
+    margin-left: 65px;
+}
+
+.buttons .button1:hover {
+    color: var(--cor1);
+    text-shadow: 2px 4px 5px #89023e;
+}
+
+.buttons .button2:hover {
+    color: var(--cor2);
+    text-shadow: 2px 2px 4px #8c2f39;
+}
+
+/* parte debaixo do site (sobra) */
+.fundo2 {
+    height: 30vh;
+    background-color: #0a0a0a;
+}
+
+footer {
+    background: linear-gradient(to right, #89023f52, #8c2f3859);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer > p {
+    font-size: 10px;
+    margin-bottom: 1px;
+}
+
+footer > a > img {
+    width: 42px;
+    height: 42px;
+    margin-top: 1px;
+}

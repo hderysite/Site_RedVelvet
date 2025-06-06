@@ -1,0 +1,913 @@
+@charset "UTF-8";
+
+/* importação de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+/* definindo font-family */
+@font-face {
+    font-family: 'Velvet';
+    src: url(../../fontes/página_inicial/demomidrunsscript-r9goo.otf) format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Title';
+    src: url(../../fontes/página_inicial/makizlo.otf) format('opentype');
+    font-weight: normal;
+}
+
+/* melhor guia */
+:root {
+    --font-velvet:'Velvet', cursive;
+    --font-content:'Title', cursive;
+    --red: #810021;
+    --black: #000;
+}
+
+/* configuração de toda a página - mudanças com os estilos específicos*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family:"Ubuntu Mono", monospace;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    box-sizing: border-box;
+}
+
+/* definindo cor de fundo */
+body {
+    background: #161616;
+    transition: background 0.3s ease;
+}
+
+/* configuração html */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; /* rolagem suave */
+    scroll-padding-top: 6rem; /* espaçamento no topo - rolagem */
+    overflow-x: hidden; /* esconde rolagem horizontal */
+}
+
+/* configuração das sections (tem mais de uma) */
+section {
+    padding: 22rem 9%; /* layout com mais espaço */
+
+}
+
+/* configuração do cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: transparent;
+    /* box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); */
+}
+
+/* configuração da imagem logo - para ficar no tamanho proporcional */
+header .logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+/* animação da logo para ficar vermelha - adição de foto */
+header .logo img:hover {
+    content: url(../../mídia/imagens/página_inicial/simbolo_red_velvet.png);
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* configuração nav */
+header .navbar a {
+    background-color: transparent;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    padding: 0 1.5rem;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    transition: padding 0.5s ease, background-color 0.5s ease;
+}
+
+/* animação nav */
+.navbar > a:hover {
+    color: #fff;
+    border-radius: 5px;
+    background-color: #81002098;
+    padding: 0.5rem 3rem;
+}
+
+/* configuração da parte 'home' ; imagem de fundo e degradê para outras partes */
+.home {
+    display: flex;
+    align-content: center;
+    min-height: 100vh;
+    background: url(../../mídia/imagens/página_inicial/red_cosmic3.jpg) no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0));
+    background-size: cover;
+    background-position: center;
+}
+
+.home.light-mode {
+    background: url('../../mídia/imagens/página_inicial/red_feel1.jpg') no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0));
+    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0));
+    background-size: cover;
+    background-position: center;
+}
+
+/* configuração da div que está presente título e texto */
+.home .content{
+    max-width: 50rem;
+    margin-top: -20px;
+}
+
+/* configuração do título dentro da div */
+.home .content h3{
+    background-color: transparent;
+    font-size: 8rem;
+    color: #810021;
+    font-family: var(--font-velvet);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
+
+}
+
+/* configuração do parágrafo dentro da div */
+.home .content p{
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0rem 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* configuração específica da section 'about' - espaçamento */
+.about {
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
+/* configuração das sections (tem mais de uma) */
+.heading {
+    font-family: var(--font-content);
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 0%;
+    margin: 2rem 0;
+    text-decoration: underline;
+    text-decoration-color: #810021;
+}
+
+/* configuração da div content - organização dos outros conteúdos */
+.about .content { 
+    display: flex; /* colocados de maneira flexível */
+    align-items: center; /* itens alinhas verticalmente ao centro */
+    gap: 2rem;
+    flex-wrap: wrap; /* quebra - próxima linha */
+    padding: 2rem 0;
+    padding-top: 2.5rem;
+}
+
+/* configuração da imagem */
+.about .content .gif img{
+    width: 100%;
+    border: 0.5rem solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+/* configuração geral do class text-about ; adequa conforme o espaço - faz com que o texto esteja ao lado imagem - nessa situação */
+.about .content .text-about {
+    flex: 1 1 40rem;
+}
+
+/* configuração do subtítulo */
+.about .content .text-about h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* configuração do parágrafo */
+.about .content .text-about p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+.extra-text {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.extra-text.active {
+    display: block;
+}
+
+.read-more-btn {
+    display: block;
+    margin-top: 10px;
+    background: #810021;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #000000bb;
+}
+
+
+/* div que configura a parte de INTEGRANTES */
+.box {
+    padding-top: 80px;
+    text-align: center;
+}
+
+/* configuração título */
+.box h1 {
+    font-family: var(--font-content);
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 0%;
+    margin: 2rem 0;
+    text-decoration: underline;
+    text-decoration-color: #810021;
+    padding-bottom: 22px;
+}
+
+/* configuração parágrafo */
+.box p {
+    font-size: 1.5rem;
+    color: #999;
+    line-height: 1.5;
+    max-width: 80%;
+    margin: 0;
+    margin-left: 210px;
+    margin-right: 210px;
+}
+
+/* configuração específica */
+.box p span {
+    color: white;
+    background-color: #810020b6;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+/* configuração link */
+.box p a {
+    color: #999;
+}
+
+/* animação ao passar o mouse */
+.box p a:hover {
+    text-decoration: underline;
+    text-decoration-color: #810021;
+}
+
+/* configuração do contêiner das imagens */
+
+.carousel-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    position: relative;
+    background: #4F0016;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.slide.active {
+    display: flex;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o texto à esquerda */
+  text-align: left; /* Garante alinhamento do conteúdo textual */
+}
+
+.slide img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+.slide-content h2 {
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 32px;
+    color: #fff;
+}
+
+.slide-content ul {
+    padding-left: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 1;
+}
+
+.nav:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.nav.prev {
+    left: -60px;
+}
+
+.nav.next {
+    right: -60px;
+}
+
+/* configuração da section/id 'side' */
+.side {
+    padding-top: 80px;
+}
+
+/* configuração geral */
+.image-wrapper {
+    display: flex;
+    flex-direction: column; /* organiza os elementos em coluna */
+    align-items: center; /* centraliza os itens no eixo horizontal */
+    text-align: center;
+}
+
+/* configuração do título */
+.image-wrapper h1 {
+    font-family: var(--font-content);
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    padding-bottom: 50px;
+
+    text-decoration: underline;
+    text-decoration-color: #810021;
+}
+
+/* configuração do parágrafo */
+.image-wrapper p {
+    font-size: 1.5rem;
+    color: #999;
+    line-height: 1.5;
+    padding-bottom: 40px;
+    max-width: 80%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* configuração do span - específico */
+.image-wrapper p span {
+    color: white;
+    background-color: #810020b6;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+/* configuração dos subtítulos */
+.concepts h3 {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 24px; 
+    color: white;
+    display: inline-block;
+    margin-left: 195px;
+    margin-right: 165px;
+    margin-bottom: 5px;
+
+}
+
+.concept {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.concepts h3 {
+    display: none;
+}
+
+.concepts::before {
+    content: "(aperte nas imagens)";
+    display: block;
+    font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.media {
+    position: relative;
+}
+
+.media a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.media .overlay {
+    pointer-events: none;
+}
+
+.image-details p {
+    display: none;
+}
+
+/* rodapé */
+footer {
+    background: linear-gradient(to right, #81002062, #3c1d794b);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* rodapé - parágrafo - frase */
+footer > p {
+    font-size: 12px;
+}
+
+/* imagem */
+footer > a > img {
+    width: 45px;
+    height: 45px;
+}
+
+.mode-selector {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    background-color: rgba(129, 0, 33, 0.8);
+    padding: 2px 6px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.mode-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+    transition: color 0.3s ease;
+    padding: 6px 8px;
+    border-radius: 5px;
+}
+
+.mode-btn.active {
+    color: #ffff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.mode-btn:hover {
+    color: #ffff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.extra-text {
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.extra-text.active {
+    display: block;
+}
+
+.read-more-btn {
+    display: block;
+    margin-top: 10px;
+    background: #810021;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #000000bb;
+}
+
+
+body.light-mode {
+    background: #ffb6c179;
+}
+
+body.light-mode .content h3 {
+    color: #d5aeae;
+}
+
+body.light-mode h1 {
+    color: rgba(0, 0, 0, 0.863);
+    text-decoration-color: #d5aeae;
+}
+
+body.light-mode .about .content .text-about h3 {
+    color: rgba(0, 0, 0, 0.863);
+}
+
+
+body.light-mode .about .content .text-about p {
+    color: #333333;
+}
+
+body.light-mode .about .content .gif img {
+    border: 0.5rem solid #333333;
+}
+
+body.light-mode .read-more-btn {
+    background: #d5aeae;
+    color: #333333;
+}
+
+body.light-mode .read-more-btn:hover {
+    background-color: #000000bb;
+    color: #fff;
+}
+
+body.light-mode p {
+    color: #333333;
+}
+
+body.light-mode .carousel-container {
+    background: #d5aeae;
+}
+
+body.light-mode .slide-content h2,
+body.light-mode .slide-content ul {
+  color: #333333;
+}
+
+body.light-mode .image-wrapper h3 {
+    color: #333333;
+}
+
+body.light-mode .image-details p {
+    color: #fff;
+    text-decoration: #d5aeae;
+}
+
+body.light-mode .image-details:hover {
+    text-decoration-color: #d5aeae;
+}
+
+body.light-mode .box a {
+    color: #333333b7;
+}
+
+.mode-buttons {
+    position: absolute;
+    left: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    background-color: rgba(129, 0, 33, 0.8);
+    padding: 2px 6px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.site-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.site-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    section {
+        padding: 10rem 5%;
+    }
+
+    header {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header .logo {
+        display: none;
+    }
+
+    header .navbar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    header .navbar a {
+        font-size: 1.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .mode-buttons .mode-btn,
+    .mode-selector .mode-btn {
+        font-size: 1.5rem;
+        padding: 0.8rem 1rem;
+        margin: 0 2px;
+    }
+
+    .mode-selector i {
+        font-size: 1.8rem;
+    }
+
+    .navbar > a:hover {
+        background-color: transparent;
+        padding: 0.5rem 1rem;
+    }
+
+    .home {
+        background: none !important;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+        min-height: auto !important;
+        margin-top: 80px;
+    }
+
+    .home.light-mode {
+        background: none;
+        -webkit-mask-image: none; 
+        mask-image: none 
+    }
+
+    .home.light-mode p { 
+        color: #000;
+    }
+
+    .home .content {
+        max-width: 100%;
+        margin-top: 0;
+        padding: 0 1rem;
+    }
+
+    .home .content h3 {
+        font-size: 7.5rem;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .home .content p {
+        text-align: justify;
+        font-size: 13px;
+    }
+
+    .about {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+
+    .about .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .about .content .gif img {
+        width: 250px;
+        height: 250px;
+        border-width: 0.4rem;
+    }
+
+    .about .content .text-about {
+        flex: 1 1 100%;
+        text-align: justify;
+    }
+
+    .about .content .text-about h3 {
+        font-size: 2.5rem;
+        padding-bottom: 15px;
+        margin-left: 7px;
+    }
+
+    .about .content .text-about p {
+        padding: 0 1rem 10px;
+        font-size: 13px;
+    }
+
+    #gif_group {
+        width: 300px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .box p {
+        text-align: justify;
+        max-width: 100%;
+        margin: 0 20px;
+        padding: 0 1rem;
+        font-size: 13px;
+    }
+
+    .carousel-container {
+        width: 95%;
+        max-width: 100%;
+        margin: 40px auto;
+        border-radius: 8px;
+        box-shadow: none;
+        background: #4F0016;
+        height: 350px; /* altura fixa */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .slide {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .slide.active {
+        display: flex;
+    }
+
+    .slide img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        flex-shrink: 0;
+    }
+
+    .slide-content {
+        max-width: 90%;
+    }
+
+    .slide-content h2 {
+        font-size: 2.2rem;
+        color: #fff;
+    }
+
+    .slide-content ul {
+        font-size: 1.5rem;
+        color: #fff;
+        padding-left: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .nav.prev {
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+
+    .nav.next {
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+
+    .nav.prev,
+    .nav.next {
+        color: #000 !important; 
+    }
+
+    .side {
+        padding-top: 40px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .image-wrapper h1 {
+        font-size: 3rem;
+        padding-bottom: 30px;
+    }
+
+    .image-wrapper p {
+        text-align: justify;
+        max-width: 90%;
+        padding-bottom: 20px;
+        font-size: 13px;
+    }
+
+    .concepts h3 {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .concept {
+        display: flex !important;  
+        flex-direction: column !important; 
+        align-items: center !important;   
+        gap: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .media {
+        width: 80% !important;
+        max-width: 320px;      
+        margin: 0 auto !important;
+        display: block !important;  
+    }
+
+    .media img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        padding: 15px 1rem;
+        font-size: 1rem;
+    }
+
+    footer > p {
+        font-size: 10px;
+    }
+}
